@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,12 +51,15 @@
                 <div class="row g-0">
                   <div class="col-lg-6">
                     <div class="card-body p-md-5 mx-md-4" >
+      
+      
                       <form>
-                        <fieldset disabled>
                         <!-- <p>VUI LÒNG ĐĂNG NHẬP</p> -->
 
+                        
+      
                         <div style="display: block;">
-                            <p class="form-label" for="form2Example11">Bạn Đang Xem Thông Tin Của</p>
+                            <p class="form-label" for="form2Example11">Tên Sách</p>
                         <div class="form-outline mb-4">
                           <input  type="email" id="form2Example11" class="form-control"/>
                         </div>
@@ -80,18 +88,19 @@
                           <input type="date" id="form2Example11" class="form-control"/>
                         </div>
                         </div>
-                        </fieldset>
+      
+      
                     </div>
                   </div>
                   <div class="col-lg-6" style="margin: auto 0;">
-                    <input id="cover" type="hidden" name="imgcover" class="form-control-file" accept="image/png, image/jpeg" onchange="preview()">
-                    <img id="frame" style="max-width: 500px; max-height: 500px;" src="https://lh3.googleusercontent.com/pw/AIL4fc-BV58s_mFbXosakwhGx7lqwtD4g9zQ7_TLjLkSvx5zejJ2hzpbr6oWKD8LPs0NLJCwZpdLy_Rr5e7aDX6Q0PCAruHj8V6oh7J8K7v5AxQKbdkvANhGuafTrUUsS8hNSeHjX3rHXUF4drVko4g2rWBq=w215-h322-s-no?authuser=0" />
+                    <input id="cover" type="file" name="imgcover" class="form-control-file" accept="image/png, image/jpeg" onchange="preview()">
+                    <img id="frame" style="max-width: 500px; max-height: 500px;" src="" />
                     <!-- <div class="px-3 py-4 p-md-5 mx-md-4"> -->
                     <!-- </div> -->
                   </div>
                 </form>
                 <div class="d-flex align-items-center justify-content-center pb-4">
-                    <button type="button" class="btn btn-outline-danger" onclick="myFunction()" id="editSave">Sửa</button>
+                    <button type="submit" class="btn btn-outline-danger" id="editSave">Thêm</button>
                   </div>
                 </div>
               </div>
@@ -100,16 +109,16 @@
         </div>
       </section>
       <script>
-        function myFunction() {
-            document.getElementById('cover').type = 'file';
-            document.getElementsByTagName("fieldset")[0].disabled = false;
-            var x = document.getElementById("editSave");
-            x.innerHTML = "Lưu";
-            setTimeout(() => {
-                x.setAttribute("type", "submit");
-                x.setAttribute("form", "myForm");
-            }, 50);
-        }
+        // function myFunction() {
+        //     document.getElementById('cover').type = 'file';
+        //     document.getElementsByTagName("fieldset")[0].disabled = false;
+        //     var x = document.getElementById("editSave");
+        //     x.innerHTML = "Lưu";
+        //     setTimeout(() => {
+        //         x.setAttribute("type", "submit");
+        //         x.setAttribute("form", "myForm");
+        //     }, 50);
+        // }
     
         function preview() {
             frame.src = URL.createObjectURL(event.target.files[0]);
